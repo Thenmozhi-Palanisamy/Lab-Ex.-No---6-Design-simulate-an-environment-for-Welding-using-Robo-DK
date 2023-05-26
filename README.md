@@ -94,19 +94,12 @@ risk of interfering with the robot.
 6. ![image](https://user-images.githubusercontent.com/36288975/173730741-29331e12-e805-44da-bc71-798894720348.png)
 `
 ## Program:
-
+```
 import os
 sys.path.append(os.path.abspath(r"""E:/RoboDK/Posts/""")) # temporarily add path to POSTS folder
 
 from KUKA_KRC2 import *
-
-try:
-  from robodk.robomath import PosePP as p
-except:
-  # This will be removed in future versions of RoboDK
   from robodk import PosePP as p
-
-
 print('Total instructions: 4')
 r = RobotPost(r"""KUKA_KRC2""",r"""KUKA KR 210 R2700 extra""",6, axes_type=['R','R','R','R','R','R'], ip_com=r"""127.0.0.1""", api_port=20500, prog_ptr=2655981884352, robot_ptr=2655982579008)
 
@@ -123,7 +116,7 @@ r.ProgFinish(r"""Prog1""")
 r.ProgSave(r"""C:/Users/Sudharshna/Documents/RoboDK""",r"""Prog1""",True,r"""E:/RoboDK/Other/VSCodium/VSCodium.exe""")
 
 ### simulation :
-![Uploading image.png…]()
+![output](k1.png)
 
  ## Result:
  An environment for welding operation using robodk is Designed & simulated.
